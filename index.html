@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+    <!-- Mova o script da API do YouTube para o cabeçalho -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <div class="greetings">
+        <span>♡</span>
+        <span>Mãe</span>
+        <span>♡</span>
+    </div>
+    <div class="description">
+        <span>Feliz dia das Mulheres!</span>
+    </div>
+
+    <!-- Adicionando um botão para ir para "flower.html" -->
+    <div class="flower-button">
+        <button id="flowerButton" ontouchstart="">Ir para Flower</button>
+    </div>
+
+    <script>
+        function setupFlowerButton() {
+            var flowerButton = document.getElementById('flowerButton');
+            flowerButton.addEventListener('click', function (event) {
+                event.preventDefault();  // Evita o comportamento padrão do navegador
+                // Redireciona para a página "flower.html"
+                window.location.href = 'flower.html';
+            });
+        }
+
+        // Chama a função de configuração quando o DOM estiver pronto
+        document.addEventListener('DOMContentLoaded', function () {
+            setupFlowerButton();
+        });
+    </script>
+</body>
+</html>
